@@ -1,6 +1,8 @@
-### A note from _bitteruhe_
-This is a fork of [maxisoft](https://github.com/maxisoft/)'s (apparently abandoned) [project](https://github.com/maxisoft/Freenom-dns-updater).  
-This fork became necessary when an [issue with freenom's login form](https://github.com/maxisoft/Freenom-dns-updater/issues/11) was found and never fixed. The fork fixes this issue with the help of a [solution](https://github.com/maxisoft/Freenom-dns-updater/issues/11#issuecomment-345633463) found by [Shihira](https://github.com/shihira).
+### A note from _bitteruhe_ and _dawierha_
+This is a fork of [bitterhu](https://github.com/bitteruhe)'s fork of [maxisoft](https://github.com/maxisoft/)'s (apparently abandoned) [project](https://github.com/maxisoft/Freenom-dns-updater).  
+bitteruhe's fork becamenex necessary when an [issue with freenom's login form](https://github.com/maxisoft/Freenom-dns-updater/issues/11) was found and never fixed. The fork fixes this issue with the help of a [solution](https://github.com/maxisoft/Freenom-dns-updater/issues/11#issuecomment-345633463) found by [Shihira](https://github.com/shihira).
+
+This fork addresses the issues with the self-signed ssl cert's used. The solution is to simply remove them and only use the certs included with the _requests_ library since I honestly do not know what the self signed certs are used for. As far as I know this is currently the only working fork.
 
 ----
 
