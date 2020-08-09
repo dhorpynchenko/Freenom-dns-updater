@@ -6,4 +6,4 @@ LABEL Description="This image is used to start freenom dns updater" Version="1.0
 COPY ./ /tmp/freenom
 RUN cd /tmp/freenom && python3 setup.py install
 
-CMD fdu process -c -t 3600 /etc/freenom.yml
+CMD fdu process -c -t ${UPDATE_INTERVAL} /etc/freenom.yml

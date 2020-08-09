@@ -302,10 +302,10 @@ def process(config, period, ignore_errors, cache):
                 update_needed = ipv4 != new_ipv4 or ipv6 != new_ipv6
 
             if update_needed:
-                p = Process(target=_update, args=(config, ignore_errors))
-                p.start()
-                p.join(500)
+                click.echo("Old ip was '{}', new is '{}'. Starting update...".format(ipv4, new_ipv4))
+                _update(config, ignore_errors)
                 if cache:
+                    click.echo("Update done. Caching new ip addresses")
                     ipv4 = new_ipv4
                     ipv6 = new_ipv6
         except:
